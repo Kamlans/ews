@@ -47,7 +47,8 @@ export default class HomeAnim extends React.Component {
   render() {
     return (
       <h1>
-        {this.props.heading}&nbsp;
+        <div style={{color:"white" , fontWeight:"bold"}}> {this.props.heading}&nbsp;</div>
+
         <span>{this.state.text}</span>
         <span id="cursor"></span>
       </h1>

@@ -1,12 +1,11 @@
 import React from 'react'
 
-function PAC() {
+function MovingObj() {
     return (
         <div>
-            PAC
+            moving obj
         </div>
     )
 }
 
-export default PAC
-    
+export default MovingObj

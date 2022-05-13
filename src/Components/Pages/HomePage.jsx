@@ -1,81 +1,72 @@
 import React from 'react'
-import {
-  BrowserRouter,
-  Routes,
-  Route,
- 
-} from "react-router-dom";
+
 import HomeAnim from '../Utils/Anim/Home/HomeAnim'
-import _Navbar from '../Utils/Navbar/Navbar'
-import AD from "../STC/AD/AD"
+
+
+import Typewriter from "typewriter-effect";
 
 function HomePage() {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/ad" element={<AD />} />
-      </Routes>
-      {/* <_Navbar /> */}
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          justifyContent: "space-evenly",
           alignItems: "center",
           height: "100vh",
           width: "100vw",
         }}
       >
+        <div style={{ color: "#FFD700", fontWeight: "bold", fontSize: "3rem" }}>
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("Welcome to ISDR, NIT ROURKELA")
+                .callFunction(() => {
+                  console.log("String typed out!");
+                })
+                .pauseFor(2500)
+                .deleteAll()
+                .callFunction(() => {
+                  console.log("All strings were deleted");
+                })
+                .start();
+            }}
+            options={{
+              strings: [
+                "Intelligent",
+                "Surveillance",
+                "Data",
+                "Retriever",
+                "Intelligent Surveillance Data Retriever",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </div>
         <HomeAnim
-          heading="Things for hipsters:"
+          heading="Smart Traffic Control: "
           dataText={[
-            "Vinyl swag.",
-            "Seitan jianbing.",
-            "Enamel pin meditation.",
-            "Denim seitan.",
-            "Semiotics austin.",
-            "Sriracha fanny pack.",
-            "Vape raw dreamcatcher.",
-            "Fam blog.",
-            "90s church-key.",
-            "Pabst distillery.",
-            "Street art unicorn.",
+            "Automatic Traffic Control",
+            "Accident Detection",
+            "Traffic Density Management Control",
+            "Crime Detection",
+            "Parking Monitoring & Control",
+            "Collaberative Traffic Management",
+            "Emergency Vehicle Traffic Management",
           ]}
         />
 
         <HomeAnim
-          heading="Things for hipsters:"
-          dataText={[
-            "Vinyl swag.",
-            "Seitan jianbing.",
-            "Enamel pin meditation.",
-            "Denim seitan.",
-            "Semiotics austin.",
-            "Sriracha fanny pack.",
-            "Vape raw dreamcatcher.",
-            "Fam blog.",
-            "90s church-key.",
-            "Pabst distillery.",
-            "Street art unicorn.",
-          ]}
+          heading="Pollution Monitoring and Control: "
+          dataText={["CO2", "CO", "Dust", "Humidity", "Temperature"]}
         />
 
         <HomeAnim
-          heading="Things for hipsters:"
-          dataText={[
-            "Vinyl swag.",
-            "Seitan jianbing.",
-            "Enamel pin meditation.",
-            "Denim seitan.",
-            "Semiotics austin.",
-            "Sriracha fanny pack.",
-            "Vape raw dreamcatcher.",
-            "Fam blog.",
-            "90s church-key.",
-            "Pabst distillery.",
-            "Street art unicorn.",
-          ]}
+          heading="Smart Home: "
+          dataText={["Health emergency", "Fire emergency", "Call to owner"]}
         />
       </div>
     </div>

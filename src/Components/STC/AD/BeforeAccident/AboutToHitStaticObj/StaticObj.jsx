@@ -1,12 +1,11 @@
 import React from 'react'
 
-function PAC() {
+function StaticObj() {
     return (
         <div>
-            PAC
+            staric object
         </div>
     )
 }
 
-export default PAC
-    
+export default StaticObj
